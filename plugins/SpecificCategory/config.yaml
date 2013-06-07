@@ -1,0 +1,18 @@
+# SpecificCategory
+#
+# Release 1.0.0 (2013-6-6)
+#
+# Copyright (c) bit part. / Powered by mt-plug.in
+name: SpecificCategory
+id: SpecificCategory
+key: specificcategory
+version: 1.0.0
+author_name: <__trans phrase="bit part">
+author_link: http://www.bit-part.net/
+description: <__trans phrase="Set specific category context.">
+plugin_link: https://github.com/bit-part/mt-plugin-SpecificCategory
+doc_link: https://github.com/bit-part/mt-plugin-SpecificCategory
+l10n_class: SpecificCategory::L10N
+tags:
+    block:
+        SpecificCategory: $specificcategory::SpecificCategory::Tags::hdlr_specificcategory
