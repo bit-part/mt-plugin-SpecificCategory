@@ -9,7 +9,7 @@ key: specificcategory
 version: 1.0.0
 author_name: <__trans phrase="bit part">
 author_link: http://www.bit-part.net/
-description: <__trans phrase="Set specific category context.">
+description: <__trans phrase="Set specific category/folder context.">
 plugin_link: https://github.com/bit-part/mt-plugin-SpecificCategory
 doc_link: https://github.com/bit-part/mt-plugin-SpecificCategory
 l10n_class: SpecificCategory::L10N

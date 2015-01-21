@@ -18,7 +18,7 @@ sub hdlr_specificcategory {
     if ($args->{id}) {
         $terms{id} = $args->{id};
     } elsif (!defined $args->{blog_id} and $class eq 'website') {
-        return $ctx->error(MT->translate('MTSpecificCategory must be used with blog_id modifier in a website context.'));
+        return $ctx->error(MT->translate('MTSpecific[_1] must be used with blog_id modifier in a website context.', ucfirst($class_type)));
     } else {
         $terms{blog_id} = ($args->{blog_id}) ? $args->{blog_id} : $blog_id;
         $terms{label} = $args->{label} if $args->{label};
