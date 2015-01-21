@@ -1,12 +1,12 @@
 # SpecificCategory
 #
-# Release 1.0.0 (2013-6-6)
+# Release 2.0.0 (2014-01-22)
 #
 # Copyright (c) bit part. / Powered by mt-plug.in
 name: SpecificCategory
 id: SpecificCategory
 key: specificcategory
-version: 1.0.0
+version: 2.0.0
 author_name: <__trans phrase="bit part">
 author_link: http://www.bit-part.net/
 description: <__trans phrase="Set specific category/folder context.">
