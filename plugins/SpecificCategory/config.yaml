@@ -16,3 +16,4 @@ l10n_class: SpecificCategory::L10N
 tags:
     block:
         SpecificCategory: $specificcategory::SpecificCategory::Tags::hdlr_specificcategory
+        SpecificFolder: $specificcategory::SpecificCategory::Tags::hdlr_specificfolder

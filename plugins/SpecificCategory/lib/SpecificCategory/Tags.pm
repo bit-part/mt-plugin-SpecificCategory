@@ -2,6 +2,7 @@ package SpecificCategory::Tags;
 use strict;
 use MT;
 use MT::Category;
+use MT::Folder;
 
 # Block Tags
 sub hdlr_specificcategory {
@@ -10,6 +11,7 @@ sub hdlr_specificcategory {
     my $blog = $ctx->stash('blog');
     my $blog_id = $ctx->stash('blog_id');
     my $class = $blog->{column_values}{class};
+    my $class_type = $args->{class_type} || 'category';
 
     my (%terms, %args);
 
@@ -23,7 +25,8 @@ sub hdlr_specificcategory {
         $terms{basename} = $args->{basename} if $args->{basename};
     }
 
-    my $cat = MT::Category->load(\%terms, {limit => 1})
+    my $class = MT->model($class_type);
+    my $cat = $class->load(\%terms, {limit => 1})
         or return MT::Template::Context::_hdlr_pass_tokens_else(@_);
 
     my $res = '';
@@ -37,6 +40,12 @@ sub hdlr_specificcategory {
         or return $ctx->error($builder->errstr);
     $res .= $out;
     return $res;
+}
+
+sub hdlr_specificfolder {
+    my ($ctx, $args, $cond) = @_;
+    $args->{class_type} = MT::Folder->properties->{class_type};
+    hdlr_specificcategory($ctx, $args, $cond);
 }
 
 1;
