@@ -8,7 +8,12 @@ function smarty_block_mtspecificcategory($args, $content, &$ctx, &$repeat) {
         $class = $blog->class;
 
         if ($args['id']) {
-            $cat = $ctx->mt->db()->fetch_category($args['id']);
+            if (isset($args['class']) && $args['class'] === 'folder') {
+                $cat = $ctx->mt->db()->fetch_folder($args['id']);
+            }
+            else {
+                $cat = $ctx->mt->db()->fetch_category($args['id']);
+            }
         }
         elseif (!isset($args['blog_id']) && $class === 'website') {
         }
@@ -20,7 +25,12 @@ function smarty_block_mtspecificcategory($args, $content, &$ctx, &$repeat) {
             if ($args['basename']) {
                 $terms['basename'] = $args['basename'];
             }
-            $cat = $ctx->mt->db()->fetch_categories($terms);
+            if (isset($args['class']) && $args['class'] === 'folder') {
+                $cat = $ctx->mt->db()->fetch_folders($terms);
+            }
+            else {
+                $cat = $ctx->mt->db()->fetch_categories($terms);
+            }
             if (isset($cat)) {
                 $cat = $cat[0];
             }
