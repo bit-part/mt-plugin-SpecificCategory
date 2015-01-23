@@ -33,6 +33,16 @@ When you use MTSpecificCategory/MTSpecificFolder tag in website context, you mus
 
 The name of category/folder.
 
+Multiple categories/folders with the same name can be differentiated using their parent category/folder names to be more explicit:
+
+    <SpecificCategory label="Plugins/MTAppjQuery/Feature">
+    ...
+    </mt:SpecificCategory>
+
+    <SpecificCategory label="Plugins/SpecificCategory/Feature">
+    ...
+    </mt:SpecificCategory>
+
 ### basename (Only Static Publishing)
 
 The basename of category/folder.

@@ -34,6 +34,16 @@ MTSpecificCategory/MTSpecificFolder タグをウェブサイトのコンテキ�
 
 カテゴリ/フォルダの名前をセットします。
 
+もし、指定したいカテゴリ/フォルダが別の親カテゴリ/フォルダに含まれる同じ名前の子カテゴリ/フォルダなら、トップレベルのカテゴリ/フォルダから順に親カテゴリ/フォルダと一緒に指定します。
+
+    <SpecificCategory label="プラグイン/MTAppjQuery/特徴">
+     ...
+    </mt:SpecificCategory>
+
+    <SpecificCategory label="プラグイン/SpecificCategory/特徴">
+     ...
+    </mt:SpecificCategory>
+
 ### basename（スタティック専用）
 
 カテゴリ/フォルダのベースネームをセットします。
